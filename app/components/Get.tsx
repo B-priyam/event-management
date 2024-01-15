@@ -2,7 +2,7 @@
 
 import { DeleteIcon, EditIcon} from "@chakra-ui/icons";
 import {Input , Button} from "@chakra-ui/react"
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { Tooltip } from "@mui/material";
@@ -64,7 +64,7 @@ const Get = () => {
     }
   }
 
-  useEffect(() => {
+  useCallback(() => {
     fetch("/api/Event")
       .then((res) => res.json())
       .then((data) => {
