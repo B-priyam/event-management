@@ -64,13 +64,13 @@ const Get = () => {
     }
   }
 
-  useCallback(() => {
+  useEffect(() => {
     fetch("/api/Event")
       .then((res) => res.json())
       .then((data) => {
         setdata(data);
       });
-  }, [Delete]);
+  }, []);
 
   // console.log(innerfieldname)
 
