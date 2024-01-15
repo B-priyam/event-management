@@ -5,16 +5,16 @@ import { NextApiRequest } from "next";
 
 connectDB();
 
-export async function GET(req) {
+export async function GET(req:Request) {
   try {
     const data = await Event.find({});
     return NextResponse.json(data);
-  } catch (error) {
+  } catch (error:any) {
     return NextResponse.json(error.message);
   }
 }
 
-export async function POST(req) {
+export async function POST(req:Request) {
   try {
     // const data = {
     //     eventname : "first event",
@@ -37,12 +37,12 @@ export async function POST(req) {
     } else {
       return NextResponse.json("errro");
     }
-  } catch (error) {
+  } catch (error:any) {
     console.log(error.message);
   }
 }
 
-export async function PUT(req) {
+export async function PUT(req:Request) {
   try {
     const data = await req.json();
     console.log(data.updateid);
@@ -98,13 +98,13 @@ export async function PUT(req) {
     // if(updateData){
     return NextResponse.json(data.id);
     // }
-  } catch (error) {
+  } catch (error:any) {
     console.log(error.message);
     return NextResponse.json(error.message);
   }
 }
 
-export async function DELETE(req) {
+export async function DELETE(req:Request) {
   try {
     const { id } = await req.json();
     const delete_data = await Event.findByIdAndDelete(id);
@@ -112,7 +112,7 @@ export async function DELETE(req) {
       return NextResponse.json(id);
     }
     return NextResponse.json("message");
-  } catch (error) {
+  } catch (error:any) {
     return NextResponse.json(error.message);
   }
 }

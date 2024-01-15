@@ -59,19 +59,19 @@ background: "linear-gradient(145deg, #cacaca, #f0f0f0)",
 boxShadow:  "36px 36px 68px #989898,-36px -36px 68px #ffffff"}} mt={10} borderRadius={10} display={"flex"} alignItems={"center"} justifyContent={"center"} flexDirection={'column'}>
       <FormControl width={"80%"}>
       <FormLabel>Event Name</FormLabel>
-      <Input className='outline-none pl-3' type='email' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event name' value={eventname} onChange={(e)=>seteventname(e.target.value)}/>
+      <Input className='outline-none pl-3' type='email' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event name' value={eventname} onChange={(e:any)=>seteventname(e.target.value)}/>
       </FormControl>
       <FormControl width={"80%"}>
       <FormLabel>Event Date</FormLabel>
-      <Input className='outline-none pl-3' type='date' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event name' value={eventdate} onChange={(e)=>seteventdate(e.target.value)}/>
+      <Input className='outline-none pl-3' type='date' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event name' value={eventdate} onChange={(e:any)=>seteventdate(e.target.value)}/>
       </FormControl>
       <FormControl width={"80%"}>
       <FormLabel>Event time</FormLabel>
-      <Input className='outline-none pl-3' type='time' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event name' value={eventtime} onChange={(e)=>seteventtime(e.target.value)}/>
+      <Input className='outline-none pl-3' type='time' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event name' value={eventtime} onChange={(e:any)=>seteventtime(e.target.value)}/>
       </FormControl>
       <FormControl width={"80%"}>
       <FormLabel>event location</FormLabel>
-      <Input className='outline-none pl-3' type='email' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event location' value={eventlocation} onChange={(e)=>seteventlocation(e.target.value)}/>
+      <Input className='outline-none pl-3' type='email' width={"100%"} borderRadius={5} height={40} fontSize={24} placeholder='enter event location' value={eventlocation} onChange={(e:any)=>seteventlocation(e.target.value)}/>
       </FormControl>
       <FormLabel className='w-4/5 items-start'>Add Items In Menu</FormLabel>
       <Menuitem onSubmit={menuitems}/>
@@ -84,9 +84,9 @@ boxShadow:  "36px 36px 68px #989898,-36px -36px 68px #ffffff"}} mt={10} borderRa
         <Button onClick={add} className='p-2 px-10 bg-black font-semibold rounded-full text-white  mt-3 '> Add more</Button>
       <FormLabel className='w-4/5'>Add Client Details</FormLabel>
       <Box className='px-10 my-3 gap-5'>
-        <Input padding={10} width={"30%"} type='text' className='mx-2 rounded-md outline-none ' placeholder='client name' value={clientname} onChange={(e)=>setclientname(e.target.value)}/>
-        <Input padding={10} width={"30%"} type='text' className='mx-2 rounded-md outline-none' placeholder='client number' value={clientnumber} onChange={(e)=>setclientnumber(e.target.value)}/>
-        <Input padding={10} width={"30%"} type='text' className='mx-2 rounded-md outline-none' placeholder='client email' value={clientemail} onChange={(e)=>setclientemail(e.target.value)}/>
+        <Input padding={10} width={"30%"} type='text' className='mx-2 rounded-md outline-none ' placeholder='client name' value={clientname} onChange={(e:any)=>setclientname(e.target.value)}/>
+        <Input padding={10} width={"30%"} type='text' className='mx-2 rounded-md outline-none' placeholder='client number' value={clientnumber} onChange={(e:any)=>setclientnumber(e.target.value)}/>
+        <Input padding={10} width={"30%"} type='text' className='mx-2 rounded-md outline-none' placeholder='client email' value={clientemail} onChange={(e:any)=>setclientemail(e.target.value)}/>
       </Box>
       <Button onClick={submitHandler}>Add event</Button>
       </Box>
