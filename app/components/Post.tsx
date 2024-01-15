@@ -5,7 +5,7 @@ import {  Box, Button, FormControl, FormLabel,  Input, MenuItem} from '@chakra-u
 import Menuitem from './Menuitem';
 
 const Post = () => {
-  const [val,setval] = useState([])
+  const [val,setval] = useState<never[][]>([])
   const [eventname,seteventname] = useState("");
   const [eventdate,seteventdate] = useState(Date);
   const [eventtime,seteventtime] = useState("");
