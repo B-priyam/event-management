@@ -77,7 +77,9 @@ boxShadow:  "36px 36px 68px #989898,-36px -36px 68px #ffffff"}} mt={10} borderRa
       <Menuitem onSubmit={menuitems}/>
       {val.map((data,i)=>{
         return (
+          <div key={i}>
           <Menuitem onSubmit={menuitems}/>
+          </div>
           )
         })}
         <p>Kindly fill the itemname and quantity and click on + icon to add the item in menu</p>
