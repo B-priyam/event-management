@@ -36,7 +36,7 @@ const Get = () => {
   {fieldname==="menuItems"?setinnerfieldname("itemName"):setinnerfieldname("clientName")}
 
   const Delete = async (id:Number) => {
-    const res = await fetch(`http://localhost:3000/api/Event`, {
+    const res = await fetch(`https://event-management-dusky.vercel.app/api/Event`, {
       method: "delete",
       body: JSON.stringify({
         id: id,
@@ -49,7 +49,7 @@ const Get = () => {
   const Update = async()=>{
     console.log(fielddata,fieldname,innerfieldname,updateid,index)
     try {
-        const res = await fetch("http://localhost:3000/api/Event",{
+        const res = await fetch("https://event-management-dusky.vercel.app/api/Event",{
           method:"Put",
           body:JSON.stringify({
               updateid,
@@ -65,7 +65,7 @@ const Get = () => {
   }
 
   useEffect(() => {
-    fetch("/api/Event")
+    fetch("https://event-management-dusky.vercel.app/api/Event")
       .then((res) => res.json())
       .then((data) => {
         setdata(data);

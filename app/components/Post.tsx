@@ -32,7 +32,7 @@ const Post = () => {
   
   const submitHandler =async (e:any)=> {
     // e.preventdefault();
-    const res = await fetch("http://localhost:3000/api/Event",{
+    const res = await fetch("https://event-management-dusky.vercel.app/api/Event",{
       method:"post",
       body:JSON.stringify({
         data:{
